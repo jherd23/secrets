@@ -1,0 +1,9 @@
+extends base.pug
+
+block content
+  script(src='/home.js', type='text/javascript')
+  p Enter your name and go!
+  input#name_input(type='text')
+  button(onclick='goToPage()')
+    | >
+  

@@ -1,0 +1,7 @@
+extends base.pug
+
+block content
+  script(src='/player.js', type='text/javascript')
+  include secret.pug
+  button(onclick=`reroll('${user.name}')`)
+    | Reroll?

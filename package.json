@@ -1,0 +1,24 @@
+{
+  "name": "secrets",
+  "version": "0.0.0",
+  "description": "A tool for distributing player secrets for a game of Icewind Dale: Rime of the Frostmaiden",
+  "main": "secrets.js",
+  "scripts": {
+    "start": "node secrets.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jherd23/secrets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jherd23/secrets/issues"
+  },
+  "homepage": "https://github.com/jherd23/secrets#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}
