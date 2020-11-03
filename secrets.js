@@ -73,10 +73,27 @@ app.get('/dm', (req, res) => {
   });
 });
 
+app.get('/secret/:id', (req, res) => {
+  const secret_id = req.params['id'];
+  if(!(secret_id in SECRETS)) {
+    res.send(`${secret_id} does not exist.`);
+    return;
+  }
+
+  const user_ids = Object.keys(USERS).filter((key) => USERS[key].secret === secret_id);
+  const user = USERS[user_ids[0]] || {name: "No player has this secret...", secret: secret_id};
+
+  res.render('secret-page.pug', {
+    user: user,
+    secret: SECRETS[secret_id]
+  });
+});
+
 app.post('/reroll/:user', (req, res) => {
   const user = req.params['user'];
   if(!(user in USERS)) {
     res.send(`${user} does not exist`);
+    return;
   }
   const newSecret = drawSecret();
   toggleSecret(USERS[user].secret);
