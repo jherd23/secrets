@@ -2,6 +2,7 @@
   position: absolute;
   top: 100px;
   left: 25%;
+  width: 50%;
 }
 
 .card {
@@ -10,8 +11,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: #000;
-  box-shadow: 5px 5px 5px;
-  width: 50%;
-  margin: 20px;
+  box-shadow: 3px 3px 3px;
+  width: calc(100% - 22px);
+  margin-bottom: 30px;
   padding: 10px;
 }
