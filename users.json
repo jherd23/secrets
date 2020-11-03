@@ -1,6 +1,10 @@
 {
-	"chloe": {
-		"name": "chloe",
+	"player1": {
+		"name": "player1",
 		"secret": "1"
+	},
+	"player2": {
+		"name": "player2",
+		"secret": "0"
 	}
 }

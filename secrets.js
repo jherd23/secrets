@@ -52,7 +52,7 @@ app.set('view engine', 'pug');
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
-  res.render('home.pug', {});
+  res.render('home.pug', {})
 });
 
 app.get('/view/:user', (req, res) => {
@@ -63,6 +63,13 @@ app.get('/view/:user', (req, res) => {
   res.render('player.pug', {
     user: USERS[user],
     secret: SECRETS[USERS[user].secret]
+  });
+});
+
+app.get('/dm', (req, res) => {
+  res.render('dm.pug', {
+    players: USERS,
+    secrets: SECRETS
   });
 });
 

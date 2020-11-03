@@ -1,0 +1,11 @@
+.content {
+  position: absolute;
+  top: 100px;
+  left: 25%;
+}
+
+.card {
+  box-shadow: 5px 5px;
+  width: 50%;
+  margin: 20px;
+}

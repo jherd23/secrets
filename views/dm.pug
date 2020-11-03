@@ -1,1 +1,9 @@
 extends base.pug
+
+block content
+  script(src='/player.js', type='text/javascript')
+  each user, key in players
+    .card
+      - secret = secrets[user.secret];
+      include secret.pug
+    
