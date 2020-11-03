@@ -34,6 +34,22 @@ function toggleSecret(secret_id) {
   SECRET_LOCK = false;
 }
 
+function reset() {
+  while(USER_LOCK);
+  USER_LOCK = true;
+  USERS = {};
+  fs.writeFileSync('users.json', JSON.stringify(USERS, null, '\t'));
+  USER_LOCK = false;
+
+  while(SECRET_LOCK);
+  SECRET_LOCK = true;
+  Object.keys(SECRETS).map((element) => {
+    SECRETS[element].available = true;
+  });
+  fs.writeFileSync('secrets.json', JSON.stringify(SECRETS, null, '\t'));
+  SECRET_LOCK = false;
+}
+
 function drawSecret() {
   const available_keys = Object.keys(SECRETS).filter((key) => SECRETS[key].available);
   const chosen_key = available_keys[Math.floor(Math.random() * available_keys.length)];
@@ -101,6 +117,11 @@ app.post('/reroll/:user', (req, res) => {
     users[user].secret = newSecret;
   });
   res.send(`Rerolled for ${user}`);
+});
+
+app.post('/reset', (req, res) => {
+  reset();
+  res.send('Secrets reset.');
 });
 
 app.listen(port, () => 'Application started');
