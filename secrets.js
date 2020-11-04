@@ -97,7 +97,7 @@ app.get('/secret/:id', (req, res) => {
   }
 
   const user_ids = Object.keys(USERS).filter((key) => USERS[key].secret === secret_id);
-  const user = USERS[user_ids[0]] || {name: "No player has this secret...", secret: secret_id};
+  const user = USERS[user_ids[0]] || {name: "No one", secret: secret_id};
 
   res.render('secret-page.pug', {
     user: user,

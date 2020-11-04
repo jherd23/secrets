@@ -7,6 +7,8 @@ block content
     .card
       - secret = secrets[user.secret];
       include secret.pug
+      hr
+      p= `This secret belongs to ${user.name}`
   .card 
     button(onclick='reset()') Reset Secrets
     
