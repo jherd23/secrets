@@ -1,3 +1,7 @@
+body  {
+  background-color: #102030;
+}
+
 .content {
   position: absolute;
   top: 100px;
@@ -6,13 +10,28 @@
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #000000;
+  color: #FFFFFF;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
   border-color: #000;
-  box-shadow: 3px 3px 3px;
   width: calc(100% - 22px);
   margin-bottom: 30px;
   padding: 10px;
+  font-family: FFSansSerif;
 }
+
+.card h1 {
+  font-variant: small-caps;
+  font-family: 'Libre Baskerville';
+  margin: 5px 0px;
+  color: #D0E0F0;
+}
+
+@font-face {
+  font-family: FFSansSerif;
+  src: url(/ScalaSans-Regular.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
