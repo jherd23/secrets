@@ -2,9 +2,49 @@ body  {
   background-color: #102030;
 }
 
+.header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+}
+
+.header img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 61px);
+  height: 112px;
+  width: 122px;
+  margin: 0;
+}
+
+.header h2 {
+  font-family: 'Libre Baskerville';
+  font-variant: small-caps;
+  margin: 5px 0px;
+  color: #D0E0F0;
+}
+
+.header h2.left {
+  position: absolute;
+  right: 50%;
+  top: 10px;
+  margin-right: 71px;
+}
+.header h2.right {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  margin-left: 71px;
+}
+
 .content {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 25%;
   width: 50%;
 }
