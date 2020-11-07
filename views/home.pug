@@ -3,8 +3,9 @@ extends base.pug
 block content
   script(src='/home.js', type='text/javascript')
   .card
-    p Enter your name and go!
+    h1 Enter Name
+    hr
     input#name_input(type='text')
-    button(onclick='goToPage()')
+    button#go(onclick='goToPage()')
       | >
   

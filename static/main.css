@@ -69,6 +69,24 @@ body  {
   color: #D0E0F0;
 }
 
+#name_input {
+  width: calc(90% - 5px);
+  margin: 0;
+  height: 20px;
+  background-color: #00000000;
+  border: 0;
+  border-bottom: 2px solid #D0E0F0;
+  color: #D0E0F0;
+  font-family: FFSansSerif;
+}
+#go  {
+  width: calc(10% - 5px);
+  margin: 0;
+  height: 27px;
+  border: 0;
+  background-color: #D0E0F0;
+}
+
 @font-face {
   font-family: FFSansSerif;
   src: url(/ScalaSans-Regular.otf);
