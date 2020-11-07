@@ -70,7 +70,7 @@ body  {
 }
 
 #name_input {
-  width: calc(90% - 5px);
+  width: calc(90% - 10px);
   margin: 0;
   height: 20px;
   background-color: #00000000;
@@ -80,7 +80,7 @@ body  {
   font-family: FFSansSerif;
 }
 #go  {
-  width: calc(10% - 5px);
+  width: calc(10% - 10px);
   margin: 0;
   height: 27px;
   border: 0;
